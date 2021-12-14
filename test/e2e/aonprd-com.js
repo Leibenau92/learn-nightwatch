@@ -19,6 +19,12 @@ module.exports = {
         .waitForElementVisible("body", 2000, false)
         .saveScreenshot(`${conf.imgpath(browser)}archive-of-nethys-click.png`);
 
+    browser
+        .expect
+        .element("#checked_checkbox:checked").to.be.present
+        .saveScreenshot(`${conf.imgpath(browser)}archive-of-nethys-checkbox.png`);
+
+
     browser.end();
   }
 };
